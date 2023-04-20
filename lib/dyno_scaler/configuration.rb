@@ -77,7 +77,7 @@ module DynoScaler
       self.min_workers      = 0
       self.enabled          = !ENV['HEROKU_OAUTH_TOKEN'].nil?
       self.application      = ENV['HEROKU_APP']
-      self.redis            = Redis.new
+      self.redis            = $redis
       self.throttle_time    = 5
 
       self.job_worker_ratio = {
